@@ -45,9 +45,9 @@ class YaUploader:
         return response.json()['href']
 
 if __name__ == '__main__':
-    path_to_file = 'hello_world.txt'
+    path_to_file = ['hello_world.txt', 'hellNO_word.txt', 'Hasta_La_vista_baby.txt']
     # Введите сюда свой ТОКЕН:
     token = ...
     uploader = YaUploader(token)
-    result = uploader.upload(path_to_file)
-
+    for file in path_to_file:
+        result = uploader.upload(file)
